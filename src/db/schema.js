@@ -1,4 +1,5 @@
 const { mysqlTable, int, varchar } = require("drizzle-orm/mysql-core");
+const renderErrorHandler = require("../utilities/renderErrorHandler");
 
 const users = mysqlTable("users", {
   id: int("id").primaryKey().autoincrement(),
@@ -13,6 +14,8 @@ const books=mysqlTable("booknemapi", {
       year: int("year").notNull(),
 
 });
+
+
 
 
 module.exports = { users, books};
